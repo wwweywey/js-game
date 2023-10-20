@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="game" id="frame">
+        <img src="./assets/pingpong.png" alt="title" id="topLogo">
+        <div id="titleOverlay" onclick="startGameOverlay()">
+            <img src="./assets/pingpong.png" alt="title" id="titleLogo">
+            <span id="startGame">click or press space to start</span>
+        </div>
+        <div class="paddle" id="leftPaddle"></div>
+        <div class="paddle" id="rightPaddle"></div>
+        <div class="ball" id="ball"></div>
+        <div class="scores">
+            <div class="score" id="playerOneScore">
+            </div>
+            <div class="score" id="playerTwoScore">
+            </div>
+        </div>
+        <button id="menuButton" onclick="showOverlay()">MENU</button>
+        <div id="overlayMenu">
+            <button id="quitButton" onclick="quitGame()">QUIT</button>
+            <button id="resetButton" onclick="resetButton()">AGAIN</button>
+        </div>
+    </div>
+    <audio src="./audio/bg-audio.mp3" id="backgroundAudio" type="audio/mpeg" autoplay></audio>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#titleOverlay {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  background-color: #1a1a1a;
+  width: 800px;
+  height: 400px;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#titleLogo {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  width: 800px;
+  height: 400px;
+}
+
+#topLogo {
+  position: absolute;
+  height: 500px;
+  opacity: 0.1;
+  top: 0px;
+}
+
+.game {
+  position: relative;
+  border-radius: 10px;
+  width: 800px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid red;
+  background-image: url(./assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.paddle {
+  position: absolute;
+  width: 5px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#leftPaddle {
+  left: 20px;
+}
+
+#rightPaddle {
+  right: 20px;
+}
+
+.ball {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url(./assets/bomb.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.lifeBar {
+  background-color: #1a1;
+  border: 1px solid #1a1a1a;
+  display: flex;
+  margin: 0 3px;
+  height: 25px;
+  width: 5px;
+  flex-wrap: nowrap;
+  border-radius: 25px;
+}
+
+.score {
+  display: flex;
+  width: 300px;
+
+  align-items: center;
+  height: 25px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  flex-direction: row;
+}
+
+.scores {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin-top: 10px;
+}
+
+#playerOneScore {
+  left: 200px;
+  justify-content: flex-start;
+}
+
+#playerTwoScore {
+  right: 0;
+
+  justify-content: flex-end;
+}
+
+#overlayMenu {
+  text-align: center;
+  display: flex;
+  z-index: 1;
+  background-color: #1a1a1a;
+  width: 800px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.overlayMenuO {
+  visibility: visible;
+}
+
+#quitButton,
+#resetButton {
+  margin: 0 1em;
+  font-weight: bold;
+  font-size: 20em;
+  padding: 8px 30px;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: 0 none;
+}
+
+#quitButton:hover,
+#resetButton:hover {
+  border-bottom: 2px solid green;
+}
+
+#menuButton {
+  position: absolute;
+  bottom: -50px;
+  visibility: hidden;
+  padding: 8px 30px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid green;
+}
+
+#startGame {
+  color: #fff;
+  background-color: #1a1a1a;
+  position: absolute;
+  bottom: 100px;
+  z-index: 1;
+  animation: myAnim 1s ease-in-out 0s infinite normal forwards;
+}
+
+@keyframes myAnim {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
